@@ -1,0 +1,9 @@
+# Xcode user-specific artifacts and per-run state
+xcuserdata/
+*.xcuserstate
+*.xcuserdatad/
+DerivedData/
+build/
+*.ipa
+*.dSYM.zip
+*.dSYM

@@ -1,0 +1,3 @@
+package com.y9vad9.minesweeper.logic
+
+data class Position(val row: Int, val col: Int)

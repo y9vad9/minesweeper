@@ -1,0 +1,81 @@
+[versions]
+kotlin = "2.3.10"
+compose-multiplatform = "1.10.3"
+compose-material3 = "1.9.0-beta03"
+coroutines = "1.10.2"
+serialization = "1.9.0"
+datetime = "0.7.1"
+flowmvi = "3.2.1"
+sqldelight = "2.3.2"
+aay-chart = "1.1.0"
+jvm-target = "21"
+detekt = "2.0.0-alpha.3"
+kover = "0.9.8"
+agp = "8.7.3"
+android-compile-sdk = "36"
+android-min-sdk = "24"
+android-target-sdk = "36"
+androidx-activity = "1.10.1"
+androidx-core = "1.15.0"
+koin = "4.0.4"
+kotlinx-browser = "0.5.0"
+
+[libraries]
+kotlinx-coroutines-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "coroutines" }
+kotlinx-coroutines-test = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-test", version.ref = "coroutines" }
+kotlinx-coroutines-swing = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-swing", version.ref = "coroutines" }
+kotlinx-serialization-json = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version.ref = "serialization" }
+kotlinx-datetime = { module = "org.jetbrains.kotlinx:kotlinx-datetime", version.ref = "datetime" }
+
+flowmvi-core = { module = "pro.respawn.flowmvi:core", version.ref = "flowmvi" }
+flowmvi-compose = { module = "pro.respawn.flowmvi:compose", version.ref = "flowmvi" }
+flowmvi-essenty = { module = "pro.respawn.flowmvi:essenty", version.ref = "flowmvi" }
+
+kotlin-test = { module = "org.jetbrains.kotlin:kotlin-test", version.ref = "kotlin" }
+
+sqldelight-runtime = { module = "app.cash.sqldelight:runtime", version.ref = "sqldelight" }
+sqldelight-coroutines-extensions = { module = "app.cash.sqldelight:coroutines-extensions", version.ref = "sqldelight" }
+sqldelight-driver-jvm = { module = "app.cash.sqldelight:sqlite-driver", version.ref = "sqldelight" }
+sqldelight-driver-android = { module = "app.cash.sqldelight:android-driver", version.ref = "sqldelight" }
+sqldelight-driver-native = { module = "app.cash.sqldelight:native-driver", version.ref = "sqldelight" }
+
+androidx-activity-compose = { module = "androidx.activity:activity-compose", version.ref = "androidx-activity" }
+androidx-core-ktx = { module = "androidx.core:core-ktx", version.ref = "androidx-core" }
+
+koin-core = { module = "io.insert-koin:koin-core", version.ref = "koin" }
+koin-compose = { module = "io.insert-koin:koin-compose", version.ref = "koin" }
+koin-android = { module = "io.insert-koin:koin-android", version.ref = "koin" }
+
+kotlinx-browser = { module = "org.jetbrains.kotlinx:kotlinx-browser", version.ref = "kotlinx-browser" }
+
+aay-chart = { module = "io.github.thechance101:chart", version.ref = "aay-chart" }
+
+compose-runtime = { module = "org.jetbrains.compose.runtime:runtime", version.ref = "compose-multiplatform" }
+compose-foundation = { module = "org.jetbrains.compose.foundation:foundation", version.ref = "compose-multiplatform" }
+compose-material3 = { module = "org.jetbrains.compose.material3:material3", version.ref = "compose-material3" }
+compose-ui = { module = "org.jetbrains.compose.ui:ui", version.ref = "compose-multiplatform" }
+compose-ui-test = { module = "org.jetbrains.compose.ui:ui-test", version.ref = "compose-multiplatform" }
+compose-components-resources = { module = "org.jetbrains.compose.components:components-resources", version.ref = "compose-multiplatform" }
+compose-desktop-macos-arm64 = { module = "org.jetbrains.compose.desktop:desktop-jvm-macos-arm64", version.ref = "compose-multiplatform" }
+compose-desktop-macos-x64 = { module = "org.jetbrains.compose.desktop:desktop-jvm-macos-x64", version.ref = "compose-multiplatform" }
+compose-desktop-linux-x64 = { module = "org.jetbrains.compose.desktop:desktop-jvm-linux-x64", version.ref = "compose-multiplatform" }
+compose-desktop-linux-arm64 = { module = "org.jetbrains.compose.desktop:desktop-jvm-linux-arm64", version.ref = "compose-multiplatform" }
+compose-desktop-windows-x64 = { module = "org.jetbrains.compose.desktop:desktop-jvm-windows-x64", version.ref = "compose-multiplatform" }
+
+gradle-kotlin-multiplatform = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", version.ref = "kotlin" }
+gradle-kotlin-compose-compiler = { module = "org.jetbrains.kotlin:compose-compiler-gradle-plugin", version.ref = "kotlin" }
+gradle-kotlin-serialization = { module = "org.jetbrains.kotlin:kotlin-serialization", version.ref = "kotlin" }
+gradle-compose-multiplatform = { module = "org.jetbrains.compose:compose-gradle-plugin", version.ref = "compose-multiplatform" }
+gradle-sqldelight = { module = "app.cash.sqldelight:gradle-plugin", version.ref = "sqldelight" }
+gradle-detekt = { module = "dev.detekt:detekt-gradle-plugin", version.ref = "detekt" }
+gradle-kover = { module = "org.jetbrains.kotlinx.kover:org.jetbrains.kotlinx.kover.gradle.plugin", version.ref = "kover" }
+gradle-android = { module = "com.android.tools.build:gradle", version.ref = "agp" }
+
+[plugins]
+kotlin-multiplatform = { id = "org.jetbrains.kotlin.multiplatform", version.ref = "kotlin" }
+kotlin-compose-compiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
+kotlin-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
+compose-multiplatform = { id = "org.jetbrains.compose", version.ref = "compose-multiplatform" }
+sqldelight = { id = "app.cash.sqldelight", version.ref = "sqldelight" }
+android-application = { id = "com.android.application", version.ref = "agp" }
+android-library = { id = "com.android.library", version.ref = "agp" }

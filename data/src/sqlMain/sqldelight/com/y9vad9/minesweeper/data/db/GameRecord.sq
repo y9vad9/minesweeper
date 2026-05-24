@@ -1,0 +1,67 @@
+-- A single completed game. The natural primary key is the wall-clock time the game
+-- finished — the user is one human and can't finish two games in the same millisecond.
+-- We index it as a SQLite INTEGER PRIMARY KEY so it doubles as the rowid.
+--
+-- `seed` is stored as the raw 64-bit Long packed by `Seed.value`; difficulty is
+-- recoverable from the prefix bits, but we also denormalize rows/cols/mines so the
+-- record is self-describing without re-running the seed decoder.
+--
+-- `outcome` is the enum name ('Won' / 'Lost').
+--
+-- `three_bv` is the board's 3BV (Bechtel's Board Benchmark Value) — the minimum
+-- left-clicks needed to clear it. Nullable because (a) records imported from the
+-- legacy JSON store don't have it, (b) we may relax the storage requirement later.
+--
+-- `three_bv_solved` is how much of that 3BV the player actually completed before the
+-- game ended (always equals `three_bv` on a win; 0..three_bv on a loss). Used to
+-- compute 3BV/s — the speedrun-community efficiency metric — without ambiguity.
+
+CREATE TABLE GameRecord (
+    played_at_epoch_millis INTEGER NOT NULL PRIMARY KEY,
+    seed INTEGER NOT NULL,
+    rows INTEGER NOT NULL,
+    cols INTEGER NOT NULL,
+    mines INTEGER NOT NULL,
+    outcome TEXT NOT NULL,
+    duration_millis INTEGER NOT NULL,
+    three_bv INTEGER,
+    three_bv_solved INTEGER
+);
+
+CREATE INDEX GameRecord_played_at_desc ON GameRecord(played_at_epoch_millis DESC);
+
+selectAll:
+SELECT *
+FROM GameRecord
+ORDER BY played_at_epoch_millis DESC;
+
+insert:
+INSERT OR REPLACE INTO GameRecord (
+    played_at_epoch_millis,
+    seed,
+    rows,
+    cols,
+    mines,
+    outcome,
+    duration_millis,
+    three_bv,
+    three_bv_solved
+) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?);
+
+clear:
+DELETE FROM GameRecord;
+
+-- Keep the most recent :cap rows; delete everything older. Used to enforce the same
+-- bounded-history behaviour the JSON store had, so the table can't grow unbounded
+-- if the user plays a lot.
+trimToCap:
+DELETE FROM GameRecord
+WHERE played_at_epoch_millis NOT IN (
+    SELECT played_at_epoch_millis
+    FROM GameRecord
+    ORDER BY played_at_epoch_millis DESC
+    LIMIT :cap
+);
+
+countAll:
+SELECT COUNT(*) FROM GameRecord;
