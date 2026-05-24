@@ -7,6 +7,16 @@ plugins {
 
 val appVersion = (findProperty("app.version") as String?) ?: "1.0.0"
 
+fun signingValue(env: String, property: String): String? =
+    (System.getenv(env) ?: findProperty(property) as String?)?.takeIf { it.isNotBlank() }
+
+val keystorePath = signingValue("ANDROID_KEYSTORE_FILE", "android.keystore.file")
+val keystorePassword = signingValue("ANDROID_KEYSTORE_PASSWORD", "android.keystore.password")
+val keystoreKeyAlias = signingValue("ANDROID_KEY_ALIAS", "android.key.alias")
+val keystoreKeyPassword = signingValue("ANDROID_KEY_PASSWORD", "android.key.password")
+val hasReleaseSigning = keystorePath != null && keystorePassword != null &&
+    keystoreKeyAlias != null && keystoreKeyPassword != null
+
 kotlin {
     jvmToolchain(21)
 
@@ -56,9 +66,21 @@ android {
         targetCompatibility = JavaVersion.VERSION_11
     }
 
+    signingConfigs {
+        if (hasReleaseSigning) {
+            create("release") {
+                storeFile = file(keystorePath!!)
+                storePassword = keystorePassword
+                keyAlias = keystoreKeyAlias
+                keyPassword = keystoreKeyPassword
+            }
+        }
+    }
+
     buildTypes {
         getByName("release") {
             isMinifyEnabled = false
+            signingConfig = signingConfigs.findByName("release")
         }
     }
 
