@@ -120,7 +120,7 @@ jobs:
         run: sudo xcode-select -s /Applications/Xcode_15.4.app/Contents/Developer
 
       - name: Build unsigned .ipa
-        run: ./gradlew :ios:buildIpa --stacktrace
+        run: ./gradlew :ios:buildIpa --no-configuration-cache --stacktrace
 
       - name: Upload .ipa
         uses: actions/upload-artifact@v4
@@ -158,5 +158,5 @@ jobs:
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          command: pages deploy web/build/dist/wasmJs/productionExecutable --project-name=${{ vars.CLOUDFLARE_PROJECT_NAME }}
+          command: pages deploy web/build/dist/wasmJs/productionExecutable --project-name=${{ vars.CLOUDFLARE_PROJECT_NAME }} --commit-dirty=true
           gitHubToken: ${{ secrets.GITHUB_TOKEN }}
