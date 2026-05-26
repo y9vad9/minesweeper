@@ -2,6 +2,7 @@ plugins {
     id("kmp-web-library")
     alias(libs.plugins.kotlin.compose.compiler)
     alias(libs.plugins.compose.multiplatform)
+    alias(libs.plugins.kotlin.serialization)
 }
 
 val composeDesktopCurrentOs = run {
@@ -43,11 +44,15 @@ kotlin {
 
             implementation(libs.kotlinx.coroutines.core)
             implementation(libs.kotlinx.datetime)
+            implementation(libs.kotlinx.serialization.json)
 
             api(libs.flowmvi.core)
             api(libs.flowmvi.compose)
 
             implementation(libs.koin.core)
+        }
+        wasmJsMain.dependencies {
+            implementation(libs.kotlinx.browser)
         }
         commonTest.dependencies {
             implementation(kotlin("test"))

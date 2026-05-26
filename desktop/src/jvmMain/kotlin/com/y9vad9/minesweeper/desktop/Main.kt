@@ -10,9 +10,9 @@ import androidx.compose.ui.window.MenuBar
 import androidx.compose.ui.window.Window
 import androidx.compose.ui.window.application
 import androidx.compose.ui.window.rememberWindowState
-import com.y9vad9.minesweeper.logic.AppLocale
-import com.y9vad9.minesweeper.logic.Skin
-import com.y9vad9.minesweeper.logic.ThemeMode
+import com.y9vad9.minesweeper.ui.AppLocale
+import com.y9vad9.minesweeper.ui.Skin
+import com.y9vad9.minesweeper.ui.ThemeMode
 import com.y9vad9.minesweeper.ui.App
 import com.y9vad9.minesweeper.ui.ClassicFonts
 import com.y9vad9.minesweeper.ui.CellInputModifier

@@ -1,7 +1,7 @@
 package com.y9vad9.minesweeper.data
 
-import com.y9vad9.minesweeper.logic.GameStateRepository
-import com.y9vad9.minesweeper.logic.PersistedGame
+import com.y9vad9.minesweeper.GameStateRepository
+import com.y9vad9.minesweeper.PersistedGame
 import kotlinx.serialization.json.Json
 
 interface GameStateBlobStore {

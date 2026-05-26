@@ -2,10 +2,10 @@ package com.y9vad9.minesweeper.web
 
 import com.y9vad9.minesweeper.data.webGameStateRepository
 import com.y9vad9.minesweeper.data.webHistoryRepository
-import com.y9vad9.minesweeper.data.webSettingsRepository
-import com.y9vad9.minesweeper.logic.GameStateRepository
-import com.y9vad9.minesweeper.logic.HistoryRepository
-import com.y9vad9.minesweeper.logic.SettingsRepository
+import com.y9vad9.minesweeper.ui.webSettingsRepository
+import com.y9vad9.minesweeper.GameStateRepository
+import com.y9vad9.minesweeper.HistoryRepository
+import com.y9vad9.minesweeper.ui.SettingsRepository
 import com.y9vad9.minesweeper.ui.AayLineChartPainter
 import com.y9vad9.minesweeper.ui.CellInputModifier
 import com.y9vad9.minesweeper.ui.LineChartPainter

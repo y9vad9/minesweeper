@@ -1,7 +1,6 @@
-package com.y9vad9.minesweeper.data
+package com.y9vad9.minesweeper.ui
 
 import android.content.Context
-import com.y9vad9.minesweeper.logic.SettingsRepository
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 import java.io.File

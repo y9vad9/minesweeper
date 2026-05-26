@@ -1,11 +1,11 @@
 package com.y9vad9.minesweeper.ui
 
-import com.y9vad9.minesweeper.logic.Difficulty
-import com.y9vad9.minesweeper.logic.GameConfig
-import com.y9vad9.minesweeper.logic.GameState
-import com.y9vad9.minesweeper.logic.Position
-import com.y9vad9.minesweeper.logic.Seed
-import com.y9vad9.minesweeper.logic.toCode
+import com.y9vad9.minesweeper.Difficulty
+import com.y9vad9.minesweeper.GameConfig
+import com.y9vad9.minesweeper.GameState
+import com.y9vad9.minesweeper.Position
+import com.y9vad9.minesweeper.Seed
+import com.y9vad9.minesweeper.toCode
 import pro.respawn.flowmvi.api.MVIAction
 import pro.respawn.flowmvi.api.MVIIntent
 import pro.respawn.flowmvi.api.MVIState

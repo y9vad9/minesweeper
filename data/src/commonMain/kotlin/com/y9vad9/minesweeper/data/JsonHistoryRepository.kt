@@ -1,7 +1,7 @@
 package com.y9vad9.minesweeper.data
 
-import com.y9vad9.minesweeper.logic.GameRecord
-import com.y9vad9.minesweeper.logic.HistoryRepository
+import com.y9vad9.minesweeper.GameRecord
+import com.y9vad9.minesweeper.HistoryRepository
 import kotlinx.coroutines.sync.Mutex
 import kotlinx.coroutines.sync.withLock
 import kotlinx.serialization.SerializationException

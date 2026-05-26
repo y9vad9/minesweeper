@@ -1,13 +1,13 @@
 package com.y9vad9.minesweeper.ui
 
-import com.y9vad9.minesweeper.logic.Difficulty
-import com.y9vad9.minesweeper.logic.GameConfig
-import com.y9vad9.minesweeper.logic.GameCodeParseResult
-import com.y9vad9.minesweeper.logic.GameEngine
-import com.y9vad9.minesweeper.logic.GameState
-import com.y9vad9.minesweeper.logic.GameStateRepository
-import com.y9vad9.minesweeper.logic.Seed
-import com.y9vad9.minesweeper.logic.parseGameCode
+import com.y9vad9.minesweeper.Difficulty
+import com.y9vad9.minesweeper.GameConfig
+import com.y9vad9.minesweeper.GameCodeParseResult
+import com.y9vad9.minesweeper.GameEngine
+import com.y9vad9.minesweeper.GameState
+import com.y9vad9.minesweeper.GameStateRepository
+import com.y9vad9.minesweeper.Seed
+import com.y9vad9.minesweeper.parseGameCode
 import kotlinx.coroutines.CoroutineScope
 import pro.respawn.flowmvi.api.PipelineContext
 import pro.respawn.flowmvi.api.Store

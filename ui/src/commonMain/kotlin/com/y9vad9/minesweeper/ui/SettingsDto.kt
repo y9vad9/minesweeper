@@ -1,9 +1,5 @@
-package com.y9vad9.minesweeper.data
+package com.y9vad9.minesweeper.ui
 
-import com.y9vad9.minesweeper.logic.AppLocale
-import com.y9vad9.minesweeper.logic.Settings
-import com.y9vad9.minesweeper.logic.Skin
-import com.y9vad9.minesweeper.logic.ThemeMode
 import kotlinx.serialization.Serializable
 
 @Serializable

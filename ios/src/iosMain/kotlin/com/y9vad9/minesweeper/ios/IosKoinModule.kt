@@ -2,10 +2,10 @@ package com.y9vad9.minesweeper.ios
 
 import com.y9vad9.minesweeper.data.iosGameStateRepository
 import com.y9vad9.minesweeper.data.iosHistoryRepository
-import com.y9vad9.minesweeper.data.iosSettingsRepository
-import com.y9vad9.minesweeper.logic.GameStateRepository
-import com.y9vad9.minesweeper.logic.HistoryRepository
-import com.y9vad9.minesweeper.logic.SettingsRepository
+import com.y9vad9.minesweeper.ui.iosSettingsRepository
+import com.y9vad9.minesweeper.GameStateRepository
+import com.y9vad9.minesweeper.HistoryRepository
+import com.y9vad9.minesweeper.ui.SettingsRepository
 import com.y9vad9.minesweeper.ui.CellInputModifier
 import com.y9vad9.minesweeper.ui.FallbackLineChartPainter
 import com.y9vad9.minesweeper.ui.IosCellInput

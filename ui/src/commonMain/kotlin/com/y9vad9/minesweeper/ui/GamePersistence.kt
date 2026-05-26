@@ -1,7 +1,7 @@
 package com.y9vad9.minesweeper.ui
 
-import com.y9vad9.minesweeper.logic.GameStateRepository
-import com.y9vad9.minesweeper.logic.PersistedGame
+import com.y9vad9.minesweeper.GameStateRepository
+import com.y9vad9.minesweeper.PersistedGame
 import pro.respawn.flowmvi.api.StorePlugin
 import pro.respawn.flowmvi.dsl.StoreBuilder
 

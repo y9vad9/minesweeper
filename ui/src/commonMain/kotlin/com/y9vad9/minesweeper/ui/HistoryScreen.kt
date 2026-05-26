@@ -20,10 +20,10 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
-import com.y9vad9.minesweeper.logic.Difficulty
-import com.y9vad9.minesweeper.logic.GameOutcome
-import com.y9vad9.minesweeper.logic.GameRecord
-import com.y9vad9.minesweeper.logic.computeStats
+import com.y9vad9.minesweeper.Difficulty
+import com.y9vad9.minesweeper.GameOutcome
+import com.y9vad9.minesweeper.GameRecord
+import com.y9vad9.minesweeper.computeStats
 
 @Composable
 fun HistoryScreen(

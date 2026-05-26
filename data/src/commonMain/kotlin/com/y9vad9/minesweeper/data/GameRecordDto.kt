@@ -1,8 +1,8 @@
 package com.y9vad9.minesweeper.data
 
-import com.y9vad9.minesweeper.logic.GameOutcome
-import com.y9vad9.minesweeper.logic.GameRecord
-import com.y9vad9.minesweeper.logic.Seed
+import com.y9vad9.minesweeper.GameOutcome
+import com.y9vad9.minesweeper.GameRecord
+import com.y9vad9.minesweeper.Seed
 import kotlinx.serialization.Serializable
 
 @Serializable

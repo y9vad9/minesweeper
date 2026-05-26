@@ -1,4 +1,4 @@
-package com.y9vad9.minesweeper.logic
+package com.y9vad9.minesweeper
 
 fun Board.threeBV(): Int {
     if (rows == 0 || cols == 0) return 0

@@ -28,36 +28,10 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
-import com.y9vad9.minesweeper.logic.GameState
-import com.y9vad9.minesweeper.logic.GameRecord
-import com.y9vad9.minesweeper.logic.computeStats
-import com.y9vad9.minesweeper.logic.gameRecordFromFinished
-import com.y9vad9.minesweeper.logic.threeBV
-import com.y9vad9.minesweeper.ui.GameIntent
-import com.y9vad9.minesweeper.ui.GameScreen
-import com.y9vad9.minesweeper.ui.GameStore
-import com.y9vad9.minesweeper.ui.HistoryIntent
-import com.y9vad9.minesweeper.ui.HistoryScreen
-import com.y9vad9.minesweeper.ui.WindowWidthClass
-import com.y9vad9.minesweeper.ui.classifyWidth
-import com.y9vad9.minesweeper.ui.Screen
-import com.y9vad9.minesweeper.ui.SettingsIntent
-import com.y9vad9.minesweeper.ui.SettingsScreen
-import com.y9vad9.minesweeper.ui.SettingsStore
-import com.y9vad9.minesweeper.ui.AppBottomNav
-import com.y9vad9.minesweeper.ui.AppHorizontalDivider
-import com.y9vad9.minesweeper.ui.AppTextButton
-import com.y9vad9.minesweeper.ui.AppVerticalDivider
-import com.y9vad9.minesweeper.ui.CellInputModifier
-import com.y9vad9.minesweeper.ui.LineChartPainter
-import com.y9vad9.minesweeper.ui.LocalCellInput
-import com.y9vad9.minesweeper.ui.LocalLineChart
-import com.y9vad9.minesweeper.ui.LocalStrings
-import com.y9vad9.minesweeper.ui.stringsFor
-import com.y9vad9.minesweeper.ui.BottomNavItem
-import com.y9vad9.minesweeper.ui.ClassicFonts
-import com.y9vad9.minesweeper.ui.LocalClassicFonts
-import com.y9vad9.minesweeper.ui.MinesweeperTheme
+import com.y9vad9.minesweeper.GameState
+import com.y9vad9.minesweeper.GameRecord
+import com.y9vad9.minesweeper.computeStats
+import com.y9vad9.minesweeper.threeBV
 import pro.respawn.flowmvi.compose.dsl.subscribe
 import kotlin.time.Clock
 
@@ -115,7 +89,7 @@ private fun AppRoot(
         }
         if (board != null) {
             val threeBV = board.threeBV()
-            gameRecordFromFinished(
+            GameRecord.fromFinished(
                 state = terminal,
                 nowEpochMillis = Clock.System.now().toEpochMilliseconds(),
                 threeBV = threeBV,

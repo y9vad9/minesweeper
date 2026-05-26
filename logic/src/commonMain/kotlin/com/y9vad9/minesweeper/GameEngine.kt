@@ -1,4 +1,4 @@
-package com.y9vad9.minesweeper.logic
+package com.y9vad9.minesweeper
 
 import kotlin.time.Clock
 import kotlin.time.Instant
@@ -8,7 +8,6 @@ class GameContractViolation(message: String) : IllegalStateException(message)
 class GameEngine(
     private val clock: Clock = Clock.System,
 ) {
-
     fun newGame(config: GameConfig): GameState.Idle = GameState.Idle(config)
 
     fun reveal(state: GameState, pos: Position): GameState = when (state) {

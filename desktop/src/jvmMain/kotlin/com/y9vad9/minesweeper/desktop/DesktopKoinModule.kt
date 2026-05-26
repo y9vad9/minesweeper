@@ -2,10 +2,10 @@ package com.y9vad9.minesweeper.desktop
 
 import com.y9vad9.minesweeper.data.jvmGameStateRepository
 import com.y9vad9.minesweeper.data.jvmHistoryRepository
-import com.y9vad9.minesweeper.data.jvmSettingsRepository
-import com.y9vad9.minesweeper.logic.GameStateRepository
-import com.y9vad9.minesweeper.logic.HistoryRepository
-import com.y9vad9.minesweeper.logic.SettingsRepository
+import com.y9vad9.minesweeper.ui.jvmSettingsRepository
+import com.y9vad9.minesweeper.GameStateRepository
+import com.y9vad9.minesweeper.HistoryRepository
+import com.y9vad9.minesweeper.ui.SettingsRepository
 import com.y9vad9.minesweeper.ui.AayLineChartPainter
 import com.y9vad9.minesweeper.ui.CellInputModifier
 import com.y9vad9.minesweeper.ui.JvmCellInput

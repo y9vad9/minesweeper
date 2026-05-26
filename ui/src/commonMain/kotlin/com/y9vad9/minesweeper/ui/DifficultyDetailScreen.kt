@@ -29,11 +29,11 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.StrokeCap
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.unit.dp
-import com.y9vad9.minesweeper.logic.Difficulty
-import com.y9vad9.minesweeper.logic.DifficultyStats
-import com.y9vad9.minesweeper.logic.GameOutcome
-import com.y9vad9.minesweeper.logic.GameRecord
-import com.y9vad9.minesweeper.logic.computeStats
+import com.y9vad9.minesweeper.Difficulty
+import com.y9vad9.minesweeper.DifficultyStats
+import com.y9vad9.minesweeper.GameOutcome
+import com.y9vad9.minesweeper.GameRecord
+import com.y9vad9.minesweeper.computeStats
 import kotlin.time.Duration.Companion.milliseconds
 
 @Composable

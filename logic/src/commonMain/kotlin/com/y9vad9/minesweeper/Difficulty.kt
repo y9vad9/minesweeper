@@ -1,4 +1,4 @@
-package com.y9vad9.minesweeper.logic
+package com.y9vad9.minesweeper
 
 enum class Difficulty(val label: String, val rows: Int, val cols: Int, val mines: Int) {
     Easy("Easy", 9, 9, 10),

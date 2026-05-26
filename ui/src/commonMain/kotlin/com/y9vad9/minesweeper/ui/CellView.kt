@@ -16,7 +16,7 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.Dp
-import com.y9vad9.minesweeper.logic.Cell
+import com.y9vad9.minesweeper.Cell
 
 @Composable
 fun CellView(

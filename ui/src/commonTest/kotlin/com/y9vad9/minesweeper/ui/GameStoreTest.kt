@@ -5,11 +5,11 @@ import kotlinx.coroutines.test.TestResult
 import kotlinx.coroutines.test.TestScope
 import kotlinx.coroutines.test.advanceUntilIdle
 import kotlinx.coroutines.test.runTest
-import com.y9vad9.minesweeper.logic.GameEngine
-import com.y9vad9.minesweeper.logic.Difficulty
-import com.y9vad9.minesweeper.logic.GameState
-import com.y9vad9.minesweeper.logic.Position
-import com.y9vad9.minesweeper.logic.Seed
+import com.y9vad9.minesweeper.GameEngine
+import com.y9vad9.minesweeper.Difficulty
+import com.y9vad9.minesweeper.GameState
+import com.y9vad9.minesweeper.Position
+import com.y9vad9.minesweeper.Seed
 import pro.respawn.flowmvi.annotation.InternalFlowMVIAPI
 import pro.respawn.flowmvi.api.DelicateStoreApi
 import kotlin.test.Test

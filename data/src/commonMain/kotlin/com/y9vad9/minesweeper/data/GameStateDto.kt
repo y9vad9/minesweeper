@@ -1,12 +1,12 @@
 package com.y9vad9.minesweeper.data
 
-import com.y9vad9.minesweeper.logic.Board
-import com.y9vad9.minesweeper.logic.BoardSnapshot
-import com.y9vad9.minesweeper.logic.GameConfig
-import com.y9vad9.minesweeper.logic.GameState
-import com.y9vad9.minesweeper.logic.PersistedGame
-import com.y9vad9.minesweeper.logic.Position
-import com.y9vad9.minesweeper.logic.Seed
+import com.y9vad9.minesweeper.Board
+import com.y9vad9.minesweeper.BoardSnapshot
+import com.y9vad9.minesweeper.GameConfig
+import com.y9vad9.minesweeper.GameState
+import com.y9vad9.minesweeper.PersistedGame
+import com.y9vad9.minesweeper.Position
+import com.y9vad9.minesweeper.Seed
 import kotlinx.serialization.Serializable
 import kotlin.time.Duration.Companion.milliseconds
 import kotlin.time.Instant

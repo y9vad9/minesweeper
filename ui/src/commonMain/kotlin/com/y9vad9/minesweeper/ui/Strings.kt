@@ -1,8 +1,6 @@
 package com.y9vad9.minesweeper.ui
 
-import com.y9vad9.minesweeper.logic.Difficulty
-import com.y9vad9.minesweeper.logic.Skin
-import com.y9vad9.minesweeper.logic.ThemeMode
+import com.y9vad9.minesweeper.Difficulty
 
 data class Strings(
     val seedLabel: String,

@@ -1,7 +1,10 @@
 package com.y9vad9.minesweeper.logic
 
-import com.y9vad9.minesweeper.logic.Difficulty
-import com.y9vad9.minesweeper.logic.Seed
+import com.y9vad9.minesweeper.GameOutcome
+import com.y9vad9.minesweeper.GameRecord
+import com.y9vad9.minesweeper.Difficulty
+import com.y9vad9.minesweeper.Seed
+import com.y9vad9.minesweeper.computeStats
 import kotlin.test.Test
 import kotlin.test.assertEquals
 import kotlin.test.assertNull

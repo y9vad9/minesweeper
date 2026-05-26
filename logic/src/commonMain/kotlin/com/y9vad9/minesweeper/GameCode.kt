@@ -1,4 +1,4 @@
-package com.y9vad9.minesweeper.logic
+package com.y9vad9.minesweeper
 
 private val PresetCodeRegex = Regex("^([EeMmHh])-([0-9A-Fa-f]{1,16})$")
 private val CustomCodeRegex = Regex("^(\\d{1,3})x(\\d{1,3})x(\\d{1,5})-([0-9A-Fa-f]{1,16})$")

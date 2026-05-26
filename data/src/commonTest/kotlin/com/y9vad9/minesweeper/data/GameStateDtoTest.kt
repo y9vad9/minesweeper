@@ -1,11 +1,11 @@
 package com.y9vad9.minesweeper.data
 
-import com.y9vad9.minesweeper.logic.GameConfig
-import com.y9vad9.minesweeper.logic.GameEngine
-import com.y9vad9.minesweeper.logic.GameState
-import com.y9vad9.minesweeper.logic.PersistedGame
-import com.y9vad9.minesweeper.logic.Position
-import com.y9vad9.minesweeper.logic.Seed
+import com.y9vad9.minesweeper.GameConfig
+import com.y9vad9.minesweeper.GameEngine
+import com.y9vad9.minesweeper.GameState
+import com.y9vad9.minesweeper.PersistedGame
+import com.y9vad9.minesweeper.Position
+import com.y9vad9.minesweeper.Seed
 import kotlinx.serialization.json.Json
 import kotlin.test.Test
 import kotlin.test.assertEquals

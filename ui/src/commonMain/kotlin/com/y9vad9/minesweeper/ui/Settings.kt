@@ -1,4 +1,4 @@
-package com.y9vad9.minesweeper.logic
+package com.y9vad9.minesweeper.ui
 
 enum class AppLocale(val tag: String, val nativeName: String) {
     En("en", "English"),

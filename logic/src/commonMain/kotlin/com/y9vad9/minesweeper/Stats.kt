@@ -1,6 +1,4 @@
-package com.y9vad9.minesweeper.logic
-
-import com.y9vad9.minesweeper.logic.Difficulty
+package com.y9vad9.minesweeper
 
 data class DifficultyStats(
     val difficulty: Difficulty,

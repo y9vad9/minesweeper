@@ -17,9 +17,9 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.unit.dp
-import com.y9vad9.minesweeper.logic.Difficulty
-import com.y9vad9.minesweeper.logic.DifficultyStats
-import com.y9vad9.minesweeper.logic.Stats
+import com.y9vad9.minesweeper.Difficulty
+import com.y9vad9.minesweeper.DifficultyStats
+import com.y9vad9.minesweeper.Stats
 import kotlin.time.Duration.Companion.milliseconds
 
 @Composable

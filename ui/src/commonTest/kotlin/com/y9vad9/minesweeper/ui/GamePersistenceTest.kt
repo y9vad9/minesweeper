@@ -1,12 +1,12 @@
 package com.y9vad9.minesweeper.ui
 
-import com.y9vad9.minesweeper.logic.Difficulty
-import com.y9vad9.minesweeper.logic.GameEngine
-import com.y9vad9.minesweeper.logic.GameState
-import com.y9vad9.minesweeper.logic.GameStateRepository
-import com.y9vad9.minesweeper.logic.PersistedGame
-import com.y9vad9.minesweeper.logic.Position
-import com.y9vad9.minesweeper.logic.Seed
+import com.y9vad9.minesweeper.Difficulty
+import com.y9vad9.minesweeper.GameEngine
+import com.y9vad9.minesweeper.GameState
+import com.y9vad9.minesweeper.GameStateRepository
+import com.y9vad9.minesweeper.PersistedGame
+import com.y9vad9.minesweeper.Position
+import com.y9vad9.minesweeper.Seed
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.test.TestScope
 import kotlinx.coroutines.test.advanceUntilIdle

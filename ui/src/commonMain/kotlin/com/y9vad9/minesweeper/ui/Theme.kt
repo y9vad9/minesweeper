@@ -15,8 +15,6 @@ import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.sp
-import com.y9vad9.minesweeper.logic.Skin
-import com.y9vad9.minesweeper.logic.ThemeMode
 
 private val DarkBg = Color(0xFF0E0E0F)
 private val DarkSurface = Color(0xFF1A1A1E)

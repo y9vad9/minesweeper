@@ -38,9 +38,9 @@ import androidx.compose.ui.platform.LocalClipboardManager
 import androidx.compose.ui.text.AnnotatedString
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
-import com.y9vad9.minesweeper.logic.Difficulty
-import com.y9vad9.minesweeper.logic.GameCodeParseResult
-import com.y9vad9.minesweeper.logic.parseGameCode
+import com.y9vad9.minesweeper.Difficulty
+import com.y9vad9.minesweeper.GameCodeParseResult
+import com.y9vad9.minesweeper.parseGameCode
 import kotlinx.coroutines.delay
 import kotlin.time.Duration.Companion.milliseconds
 

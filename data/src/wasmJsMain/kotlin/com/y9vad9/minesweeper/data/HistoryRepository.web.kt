@@ -1,6 +1,6 @@
 package com.y9vad9.minesweeper.data
 
-import com.y9vad9.minesweeper.logic.HistoryRepository
+import com.y9vad9.minesweeper.HistoryRepository
 import kotlinx.browser.localStorage
 import org.w3c.dom.get
 

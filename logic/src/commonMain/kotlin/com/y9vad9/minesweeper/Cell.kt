@@ -1,4 +1,4 @@
-package com.y9vad9.minesweeper.logic
+package com.y9vad9.minesweeper
 
 sealed interface Cell {
     data class Hidden(val flagged: Boolean) : Cell

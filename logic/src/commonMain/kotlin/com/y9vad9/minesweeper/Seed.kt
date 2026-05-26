@@ -1,4 +1,4 @@
-package com.y9vad9.minesweeper.logic
+package com.y9vad9.minesweeper
 
 import kotlin.jvm.JvmInline
 import kotlin.random.Random

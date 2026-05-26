@@ -1,5 +1,7 @@
 package com.y9vad9.minesweeper.logic
 
+import com.y9vad9.minesweeper.GameConfig
+import com.y9vad9.minesweeper.Seed
 import kotlin.test.Test
 import kotlin.test.assertEquals
 import kotlin.test.assertFailsWith

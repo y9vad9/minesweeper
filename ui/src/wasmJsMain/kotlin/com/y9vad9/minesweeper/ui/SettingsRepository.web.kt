@@ -1,6 +1,5 @@
-package com.y9vad9.minesweeper.data
+package com.y9vad9.minesweeper.ui
 
-import com.y9vad9.minesweeper.logic.SettingsRepository
 import kotlinx.browser.localStorage
 import org.w3c.dom.get
 

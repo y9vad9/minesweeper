@@ -4,7 +4,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.State
 import androidx.compose.runtime.produceState
 import kotlinx.coroutines.delay
-import com.y9vad9.minesweeper.logic.GameState
+import com.y9vad9.minesweeper.GameState
 import kotlin.time.Clock
 import kotlin.time.Duration
 import kotlin.time.Duration.Companion.milliseconds

@@ -7,8 +7,8 @@ import androidx.compose.ui.test.onNodeWithTag
 import androidx.compose.ui.test.performMouseInput
 import androidx.compose.ui.test.runComposeUiTest
 import androidx.compose.ui.unit.dp
-import com.y9vad9.minesweeper.logic.Cell
-import com.y9vad9.minesweeper.logic.Position
+import com.y9vad9.minesweeper.Cell
+import com.y9vad9.minesweeper.Position
 import kotlin.test.Test
 import kotlin.test.assertEquals
 

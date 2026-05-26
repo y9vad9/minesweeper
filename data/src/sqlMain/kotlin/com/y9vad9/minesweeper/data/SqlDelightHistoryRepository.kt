@@ -2,10 +2,10 @@ package com.y9vad9.minesweeper.data
 
 import app.cash.sqldelight.db.SqlDriver
 import com.y9vad9.minesweeper.data.db.MinesweeperDatabase
-import com.y9vad9.minesweeper.logic.Seed
-import com.y9vad9.minesweeper.logic.GameOutcome
-import com.y9vad9.minesweeper.logic.GameRecord
-import com.y9vad9.minesweeper.logic.HistoryRepository
+import com.y9vad9.minesweeper.Seed
+import com.y9vad9.minesweeper.GameOutcome
+import com.y9vad9.minesweeper.GameRecord
+import com.y9vad9.minesweeper.HistoryRepository
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 import com.y9vad9.minesweeper.data.db.GameRecord as DbGameRecord

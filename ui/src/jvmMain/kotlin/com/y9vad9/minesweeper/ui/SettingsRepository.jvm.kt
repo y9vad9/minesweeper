@@ -1,7 +1,5 @@
-package com.y9vad9.minesweeper.data
+package com.y9vad9.minesweeper.ui
 
-import com.y9vad9.minesweeper.data.minesweeperHomeDir
-import com.y9vad9.minesweeper.logic.SettingsRepository
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 import java.io.File
@@ -18,6 +16,7 @@ private class FileSettingsBlobStore(private val file: File) : SettingsBlobStore 
 }
 
 fun jvmSettingsRepository(): SettingsRepository {
-    val file = File(minesweeperHomeDir(), "settings.json")
+    val home = System.getProperty("user.home") ?: "."
+    val file = File(File(home, ".minesweeper"), "settings.json")
     return JsonSettingsRepository(FileSettingsBlobStore(file))
 }

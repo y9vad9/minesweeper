@@ -1,7 +1,5 @@
-package com.y9vad9.minesweeper.data
+package com.y9vad9.minesweeper.ui
 
-import com.y9vad9.minesweeper.logic.Settings
-import com.y9vad9.minesweeper.logic.SettingsRepository
 import kotlinx.serialization.SerializationException
 import kotlinx.serialization.json.Json
 

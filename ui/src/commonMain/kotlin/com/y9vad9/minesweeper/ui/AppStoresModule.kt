@@ -1,8 +1,7 @@
 package com.y9vad9.minesweeper.ui
 
-import com.y9vad9.minesweeper.logic.GameStateRepository
-import com.y9vad9.minesweeper.logic.HistoryRepository
-import com.y9vad9.minesweeper.logic.SettingsRepository
+import com.y9vad9.minesweeper.GameStateRepository
+import com.y9vad9.minesweeper.HistoryRepository
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.SupervisorJob

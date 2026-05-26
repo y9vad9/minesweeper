@@ -10,7 +10,6 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.horizontalScroll
 import androidx.compose.foundation.verticalScroll
-import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
@@ -27,18 +26,9 @@ import androidx.compose.ui.layout.positionInWindow
 import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
-import com.y9vad9.minesweeper.logic.Cell
-import com.y9vad9.minesweeper.logic.GameState
-import com.y9vad9.minesweeper.logic.Position
-import com.y9vad9.minesweeper.ui.BoardGrid
-import com.y9vad9.minesweeper.ui.GameOverlay
-import com.y9vad9.minesweeper.ui.GameTopBar
-import com.y9vad9.minesweeper.ui.NewGameCompactAffordance
-import com.y9vad9.minesweeper.ui.WindowWidthClass
-import com.y9vad9.minesweeper.ui.classifyWidth
-import com.y9vad9.minesweeper.ui.LocalStrings
-import com.y9vad9.minesweeper.ui.LocalGameColors
-import com.y9vad9.minesweeper.ui.LocalLookAndFeel
+import com.y9vad9.minesweeper.Cell
+import com.y9vad9.minesweeper.GameState
+import com.y9vad9.minesweeper.Position
 import pro.respawn.flowmvi.compose.dsl.subscribe
 
 @Composable

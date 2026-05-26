@@ -10,8 +10,8 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.unit.Dp
-import com.y9vad9.minesweeper.logic.Cell
-import com.y9vad9.minesweeper.logic.Position
+import com.y9vad9.minesweeper.Cell
+import com.y9vad9.minesweeper.Position
 
 private const val LAZY_CELL_THRESHOLD = 2500
 
@@ -30,9 +30,29 @@ fun BoardGrid(
     gap: Dp = LocalLookAndFeel.current.gridGap,
 ) {
     if (isLazyBoard(rows, cols)) {
-        LazyBoardGrid(rows, cols, cellAt, cellSize, onReveal, onFlag, onChord, modifier, gap)
+        LazyBoardGrid(
+            rows = rows,
+            cols = cols,
+            cellAt = cellAt,
+            cellSize = cellSize,
+            onReveal = onReveal,
+            onFlag = onFlag,
+            onChord = onChord,
+            modifier = modifier,
+            gap = gap,
+        )
     } else {
-        StaticBoardGrid(rows, cols, cellAt, cellSize, onReveal, onFlag, onChord, modifier, gap)
+        StaticBoardGrid(
+            rows = rows,
+            cols = cols,
+            cellAt = cellAt,
+            cellSize = cellSize,
+            onReveal = onReveal,
+            onFlag = onFlag,
+            onChord = onChord,
+            modifier = modifier,
+            gap = gap,
+        )
     }
 }
 

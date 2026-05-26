@@ -1,7 +1,7 @@
 package com.y9vad9.minesweeper.ui
 
-import com.y9vad9.minesweeper.logic.GameRecord
-import com.y9vad9.minesweeper.logic.HistoryRepository
+import com.y9vad9.minesweeper.GameRecord
+import com.y9vad9.minesweeper.HistoryRepository
 import kotlinx.coroutines.CoroutineScope
 import pro.respawn.flowmvi.api.MVIAction
 import pro.respawn.flowmvi.api.MVIIntent

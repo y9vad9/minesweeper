@@ -1,6 +1,6 @@
 package com.y9vad9.minesweeper.data
 
-import com.y9vad9.minesweeper.logic.HistoryRepository
+import com.y9vad9.minesweeper.HistoryRepository
 import kotlinx.coroutines.runBlocking
 import kotlinx.serialization.Serializable
 import kotlinx.serialization.SerializationException

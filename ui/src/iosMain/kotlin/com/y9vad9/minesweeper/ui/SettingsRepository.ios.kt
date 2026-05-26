@@ -1,6 +1,5 @@
-package com.y9vad9.minesweeper.data
+package com.y9vad9.minesweeper.ui
 
-import com.y9vad9.minesweeper.logic.SettingsRepository
 import platform.Foundation.NSUserDefaults
 
 private class UserDefaultsBlobStore(private val key: String) : SettingsBlobStore {
