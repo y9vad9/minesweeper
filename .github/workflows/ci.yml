@@ -30,6 +30,35 @@ jobs:
       - name: Run tests
         run: ./gradlew jvmTest :data:wasmJsTest :data:testDebugUnitTest --stacktrace
 
+  deploy-preview:
+    runs-on: ubuntu-latest
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    environment:
+      name: preview
+      url: ${{ steps.deploy.outputs.deployment-url }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up JDK
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: 21
+
+      - name: Set up Gradle
+        uses: gradle/actions/setup-gradle@v4
+
+      - name: Build web distribution
+        run: ./gradlew :web:wasmJsBrowserDistribution --stacktrace
+
+      - name: Deploy to Cloudflare Pages (preview)
+        id: deploy
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          command: pages deploy web/build/dist/wasmJs/productionExecutable --project-name=${{ vars.CLOUDFLARE_PROJECT_NAME }} --branch=preview --commit-dirty=true
+          gitHubToken: ${{ secrets.GITHUB_TOKEN }}
+
   test-ios:
     runs-on: macos-14
     steps:
