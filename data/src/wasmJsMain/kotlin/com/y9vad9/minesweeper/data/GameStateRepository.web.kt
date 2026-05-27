@@ -4,7 +4,7 @@ import com.y9vad9.minesweeper.GameStateRepository
 import kotlinx.browser.localStorage
 import org.w3c.dom.get
 
-private class LocalStorageGameBlobStore(private val key: String) : GameStateBlobStore {
+internal class LocalStorageGameBlobStore(private val key: String) : GameStateBlobStore {
     override suspend fun read(): String? = localStorage[key]
     override suspend fun write(json: String) {
         localStorage.setItem(key, json)

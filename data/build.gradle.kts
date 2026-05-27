@@ -6,6 +6,11 @@ plugins {
 
 android {
     namespace = "com.y9vad9.minesweeper.data"
+    testOptions {
+        unitTests {
+            isIncludeAndroidResources = true
+        }
+    }
 }
 
 kotlin {
@@ -51,6 +56,19 @@ kotlin {
         }
         jvmTest.dependencies {
             implementation(libs.sqldelight.driver.jvm)
+        }
+        val androidUnitTest by getting {
+            dependencies {
+                implementation(libs.sqldelight.driver.android)
+                implementation(libs.robolectric)
+                implementation(libs.androidx.test.core)
+            }
+        }
+        iosTest.dependencies {
+            implementation(libs.sqldelight.driver.native)
+        }
+        wasmJsTest.dependencies {
+            implementation(libs.kotlinx.browser)
         }
     }
 }

@@ -5,7 +5,7 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 import java.io.File
 
-private class FileGameStateBlobStore(private val file: File) : GameStateBlobStore {
+internal class FileGameStateBlobStore(private val file: File) : GameStateBlobStore {
     override suspend fun read(): String? = withContext(Dispatchers.IO) {
         if (file.exists()) file.readText() else null
     }
